@@ -26,6 +26,9 @@ const orgnizarproductos = (pathname) => {
             init('menus',venta)
             break;
             case "/":
+                venta = productospopulares();
+                console.log(venta)
+                init('populares',venta)
                 console.log(productospopulares());
                 break;
         default:
@@ -41,25 +44,39 @@ const productospopulares = () => {
 const init = (clase, products) => {
  let main_div = document.querySelector(`.${clase}`);
  products.map((product)=>{
-    let div = creacioncajas(product);
+    let div = creacioncajas(product, clase);
     main_div.appendChild(div)
  })
 }
 
 // Creacion de cajas
-const creacioncajas = (producto) => {
+const creacioncajas = (producto, clase) => {
     const div = document.createElement('div');
-    div.className = 'menu';
-    div.innerHTML = `
-    <div class="menu_info">
-        <div class="menu_info_titulo">
-            <h3>${producto.nombre}</h3>
-            <p>L. ${producto.precio}.00</p>
+    if(clase === "menus"){
+        div.className = 'menu';
+        div.innerHTML = `
+        <div class="menu_info">
+            <div class="menu_info_titulo">
+                <h3>${producto.nombre}</h3>
+                <p>L. ${producto.precio}.00</p>
+            </div>
+            <p class="desc">${producto.descripcion}</p>
         </div>
-        <p class="desc">${producto.descripcion}</p>
-    </div>
-    <img src="../img/taza-de-cafe.png" alt="">
-    `
+        <img src=${producto.imagen} alt="${producto.nombre}">
+        ` 
+    }
+    else if(clase === "populares"){
+        div.className = 'popular';
+        div.innerHTML = `
+        <img src="${producto.imagen}" alt="${producto.nombre}">
+        <div class="popular-info">
+            <h3>${producto.nombre}</h3>
+            <p class="desc">${producto.descripcion}</p>
+            <p class="tipo">Tipo: ${producto.tipo}</p>
+            <p class="precio">L. ${producto.precio}.00</p>
+        </div>
+        ` 
+    }
     return div
 }
 

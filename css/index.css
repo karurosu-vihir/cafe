@@ -35,7 +35,7 @@
 .producto{
     display: flex;
     flex-flow: column nowrap;
-    margin-top: 100px;
+    margin-top: 50px;
     padding-bottom: 50px;
     align-items: center;
 }
@@ -46,7 +46,7 @@
     text-align: center;
 }
 
-.menus{
+.menus, .populares{
     width: 80%;
     display: flex;
     flex-flow: column wrap;
@@ -65,7 +65,6 @@
 .menu img{
     height: 256px;
     width: 256px;
-    background-color: white;
 }
 
 .menu_info{
@@ -92,6 +91,56 @@
 
 .menu_info_titulo p{
     font-size: 20px;
+    font-weight: bold;
+}
+
+/* Pagina principal */
+
+.populares{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,300px);
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.popular{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 300px;
+    height: 540px;
+    border: 5px inset #9E7418;
+    padding: 10px 7px;
+    border-radius: 1.5rem;
+    align-items: center;
+    gap: 20px;
+}
+
+.popular img{
+    height: 256px;
+    width: 256px;
+    border-radius: 1.5rem;
+}
+
+.popular-info{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.popular-info h3{
+    font-size: 30px;
+}
+
+.tipo{
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.precio{
+    font-size: 30px;
     font-weight: bold;
 }
 
@@ -125,6 +174,6 @@
     }
 
     .menu{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 }
