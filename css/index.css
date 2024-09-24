@@ -1,0 +1,130 @@
+.hero_banner{
+    width: 100vw;
+    height: calc(100vh - 130px);
+    background-image: url('../img/coffee-wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-flow: row;
+    color: white;
+}
+
+.hero_banner h2{
+    padding: 20px 0 0 20px;
+    width: 50vw;
+}
+/* trbl */
+
+.aniversario{
+    font-size: 150px;
+}
+
+.slogan{
+    font-size: 50px;
+}
+
+.hero_banner p{
+    padding-bottom: 50px;
+    padding-right: 20px;
+    width: 50vw;
+    font-size: 35px;
+    align-self: flex-end; 
+}
+
+.producto{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-top: 100px;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+.producto h2{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
+.menus{
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    color: #9E7418;
+}
+/* trbl */
+.menu{
+    padding: 25px 50px 0 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
+.menu img{
+    height: 256px;
+    width: 256px;
+    background-color: white;
+}
+
+.menu_info{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.desc{
+    font-size: 18px;
+}
+
+.menu_info_titulo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu_info_titulo h3{
+    font-size: 25px;
+}
+
+.menu_info_titulo p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Media para quitar padding */
+@media (max-width: 800px){
+    .menu{
+        padding: 25px 0 0 0;
+    }
+}
+
+@media (max-width: 1000px) {
+    .aniversario{
+        font-size: 120px;
+    }
+    
+    .slogan{
+        font-size: 40px;
+    }
+    
+    .hero_banner p{
+        padding-bottom: 50px;
+        width: 50vw;
+        font-size: 25px;
+        align-self: flex-end; 
+    }
+}
+
+@media (max-width: 690px) {    
+    .hero_banner p{
+        display: none;
+    }
+
+    .menu{
+        flex-direction: column;
+    }
+}

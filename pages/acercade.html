@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Artesnal - Acerca de</title>
+    <link rel="icon" type="image/x-icon" href="../img/taza-de-cafe.png">
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+    <header>
+        <div class="header_logo">
+            <img src="../img/taza-de-cafe.png" alt="hola">
+            <h1>CafeLoco</h1>
+        </div>
+        <nav>
+            <button class="hamburguesa" onclick="toggle_ham();">
+                <img class="hamburguesa-icon" src="../img/iconos/hamburguesa.svg" alt="menu hamburguesa">
+            </button>
+            <ul class="navbar">
+                <li class="navbar-item navbar-item-ham"><a href="/">Home</a></li>
+                <li class="navbar-item navbar-item-ham"><a onclick="toggle_dropdown()">Menu</a>
+                <ul class="dropdown">
+                    <li class="navbar-item navbar-item-ham"><a href="/pages/Cafes.html">Caliente</a></li>
+                    <li class="navbar-item navbar-item-ham"><a href="/pages/helado.html">Helado</a></li>
+                    <li class="navbar-item navbar-item-ham"><a href="/pages/postre.html">Postres</a></li>
+                </ul></li>
+                <li class="navbar-item navbar-item-ham"><a href="/pages/acercade.html" style="background-color: #591F0B; color: white; cursor: default;">Acerca De</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <img src="../img/taza-de-cafe.png" alt="">
+    </main>
+    <footer>
+        <ul class="footer_list">
+            <li class="footer_list_item">©CafeLoco</li>
+            <li class="footer_list_item">Hecho por: Carlos E. Vijil Maldonado</li>
+            <li class="footer_list_item">
+                <ul class="footer_social">
+                    <li><a href="https://www.facebook.com" target="_blank"><img src="../img/iconos/facebook.png" alt="facebook"></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><img src="../img/iconos/instagram.png" alt="instagram"></a></li>
+                    <li><a href="https://www.whatsapp.com/?lang=es_LA" target="_blank"><img src="../img/iconos/whatsapp.svg" alt="whatsapp"></a></li>
+                </ul>
+            </li>
+        </ul>
+    </footer>
+    <script src="../index.js" type="module"></script>
+</body>
+</html>

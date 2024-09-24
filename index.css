@@ -1,0 +1,208 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+a{
+    color: black;
+}
+
+header{
+    position: fixed;
+    border-bottom: 2px solid brown;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 2fr 6fr;
+    width: 100vw;
+    height: 129px;
+    background-color: #9E7418;
+}
+
+.header_logo{
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 25px 0;
+    padding-left: 20px;
+    align-items: center;
+}
+
+.header_logo img{
+    width: 50px;
+    height: 50px;
+}
+
+nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hamburguesa{
+    display: none;
+    width: 75px;
+    height: 75px;
+    background: none;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburguesa-icon{
+    width: 75px;
+    height: 75px;
+}
+
+.navbar{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2.5%;
+    margin-right: 1.7%;
+}
+
+.navbar-item{
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    height: 100%;
+    padding: 10px 20px;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.navbar-item:nth-child(2){
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.dropdown{
+    position: fixed;
+    top: 125px;
+    background-color: #9E7418;
+    padding: 0;
+    display: none;
+}
+
+.dropdown li a{
+    width: 100%;
+    padding: 15px 10px;
+}
+
+.navbar-item a:hover{
+    background-color: #591F0B;
+    color: white;
+}
+
+main{
+    padding-top: 128px;
+    background-color: #16151d;
+}
+
+footer{
+    background-color: black;
+}
+
+.footer_list{
+    display: flex;
+    flex-flow: column nowrap;
+    color: gray;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+}
+
+.footer_list_item{
+    text-align: center;
+    width: 100vw;
+}
+
+.footer_social{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    gap: 5%;
+    padding-right: 30px;
+}
+
+.footer_social li a img{
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 600px) {
+    nav{
+        margin-right: 20px;
+        padding: 25px 0;
+    }
+
+    .hamburguesa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    .navbar-ham{
+        width: 100vw;
+        position: absolute;
+        top: 129px;
+        left: 0;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        background-color: #591F0B;
+        list-style: none;
+        padding: 0;
+        font-size: large;
+    }
+    
+    .navbar-item-ham{
+        border-bottom: 1px solid black;
+        width: 100vw;
+    }
+
+    .navbar-item-ham a{
+        width: 100vw;
+        color: white;
+        font-weight: bold;
+        padding: 25px;
+    }
+
+    .dropdown{
+        position: unset;
+        background-color: #591F0B;
+    }
+
+    .dropdown li a{
+        padding: 25px;
+    }
+
+    .dropdown li:nth-child(1){
+        border-top: 1px solid black;
+    }
+}
+
