@@ -4,6 +4,7 @@ const data = info()
 const productos = data.producto
 
 document.addEventListener("DOMContentLoaded",()=>{
+    console.log("estoy aqui");
     orgnizarproductos(window.location.pathname)
 })
 
